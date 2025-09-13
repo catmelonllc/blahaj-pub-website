@@ -1,0 +1,118 @@
+<!DOCTYPE html><html><head>
+	<meta charset="utf-8" />
+	<title>under construction</title>
+	<style>
+
+html,body,#yea {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+body {
+	background: #000;
+}
+
+</style>
+</head>
+<body><div id="yea">&nbsp;</div>
+<script>
+var boddy = 0;
+function asdf()
+{
+	var r = Math.random() > 0.1;
+	//boddy.style.background = r ? '#940607':'#940647';
+	setTimeout('asdf();', 20);
+}
+
+var done = 0;
+var vp = null;
+var RocketLauncher = function(name, vp)
+{
+	var rite = -14;
+	var speed = Math.random()*0.2 + 0.1;
+	var size = Math.random()*10 + 4;
+	var obj = document.createElement('img');
+	obj.style.position = 'absolute';
+	obj.style.right = rite +'%';
+	obj.style.width = size +'%';
+	//obj.style.height = size +'%';
+	obj.style.top = Math.random()*90 +'%';
+	obj.style.display = 'block';
+	obj.setAttribute('src', name);
+	vp.appendChild(obj);
+	
+	this.obj = obj;
+	this.right = rite;
+	this.speed = speed;
+	this.next = null;
+};
+var Arsenal = function()
+{
+	var front = null;
+	var fire = function(rocket)
+	{
+		rocket.next = front;
+		front = rocket;
+	};
+	var promote = function(rocket)
+	{
+		if (rocket == front)
+		{
+			front = rocket.next;
+			return;
+		}
+		var curr = front;
+		while  (curr.next && curr.next !== rocket)
+			curr = curr.next;
+
+		if (curr)
+			curr.next = rocket.next;
+	};
+	var getFront = function()
+	{
+		return front;
+	};
+	this.fire = fire;
+	this.promote = promote;
+	this.getFront = getFront;
+};
+var artillery = new Arsenal();
+
+function ticker()
+{
+	var rocket = 'i/' + Math.floor(Math.random()*939+1) + '.gif';
+	artillery.fire(new RocketLauncher(rocket, vp));
+	rocket = artillery.getFront();
+	while (rocket)
+	{
+		var next = rocket.next;
+		rocket.right += rocket.speed;
+		if (rocket.right > 100)
+		{
+			vp.removeChild(rocket.obj);
+			artillery.promote(rocket);
+			rocket = next;
+			continue;
+		}
+		rocket.obj.style.right = rocket.right +'%';
+		rocket = next;
+	}
+}
+function onloadHandler()
+{
+	if (++done>1)
+	{
+		vp = document.getElementById('yea');
+		setInterval(ticker,100);
+
+		boddy = document.getElementsByTagName('html')[0];
+		asdf();
+	}
+}
+window.onload = onloadHandler;
+onloadHandler();
+</script>
+</body>
+</html>

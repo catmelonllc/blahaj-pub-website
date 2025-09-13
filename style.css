@@ -1,0 +1,125 @@
+@import 
+url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+        body { font-family: 'Roboto Mono', monospace; 
+            background-color: #002009; color: #d1e7c2; 
+            /* Default text color for dark mode */
+        }
+        /* Dark Mode Link Colors */ a { color: #43d843; 
+            /* Unvisited links */
+        }
+        a:visited { color: #42db68; /* Visited links */
+        }
+        a:hover { color: #A8E4A2; /* Hover for dark 
+            mode */
+        }
+        /* Dark Mode H1 Color */ h1 { color: #70ec70; 
+            /* Heading 1 color for dark mode */
+        }
+        
+        img { max-width: 100%; /* IMPORTANT: Makes 
+    images responsive, so they shrink to fit smaller 
+    screens/containers */ height: auto; /* IMPORTANT: 
+    Maintains the image's aspect ratio when its width 
+    changes */ width: 250px; /* Adjust this value! Try 
+    300px, 400px, 500px, etc., to find a good 
+    consistent size */ display: block; /* Makes the 
+    image a block-level element, so it takes up its own 
+    line */ margin: 10px 0 px; /* Centers the image 
+    horizontally if it's smaller than its container */ 
+    border-radius: 8px; /* Optional: Adds slightly 
+    rounded corners for a softer look */ box-shadow: 0 
+    4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a 
+    subtle shadow for depth */
+}
+.image-gallery { display: flex; /* Makes the container 
+    a flex container */ flex-wrap: wrap; /* Allows 
+    images to wrap to the next line if there's not 
+    enough space */ justify-content: center; /* Centers 
+    the images horizontally within the gallery */ gap: 
+    20px; /* Adds space between the images */ 
+    margin-top: 20px; /* Optional: Adds some space 
+    above the gallery */ margin-bottom: 20px; /* 
+    Optional: Adds some space below the gallery */
+}
+/* You might want to remove the 'display: block;' and 
+'margin: 10px auto;' from the general img rule
+   if you want the flexbox to handle all alignment and 
+   spacing. Let's adjust the general img rule to fit 
+   flexbox better: */
+    strong, b { color: #77dd77;
+}
+    /* Animated Rainbow Gradient for "About me!" 
+    heading */
+/* Animated Rainbow Gradient for "About me!" heading */ 
+h1, h2, em {
+    background-image: linear-gradient(
+        to right,
+        #ff0000, /* red */
+        #ff8000, /* orange */
+        #ffff00, /* yellow */
+        #00ff00, /* green */
+        #0000ff, /* blue */
+        #4b0082, /* indigo */
+        #9400d3 /* violet */
+    );
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    
+    /* ADD THESE TWO LINES FOR ANIMATION */
+    background-size: 200% auto;
+    animation: rainbow-animation 7s infinite linear;
+}
+
+/* ADD THIS ENTIRE RULE FOR ANIMATION */
+@keyframes rainbow-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 200% 50%;
+    }
+}
+#top-bar {
+  background-color: #00582b; /* green cause why not*/
+  padding: 15px;
+  color: #b5f7be; /* White text */
+  text-align: center; /* Aligns text to the center */
+font-family: 'Roboto Mono', monospace;
+}
+
+#top-bar a {
+  color: #ffffff;
+  text-decoration: none; /* Removes the underline from links */
+  margin: 0 4px; /* Adds space between links */
+  font-weight: bold;
+}
+
+#top-bar a:hover {
+  text-decoration: underline; /* Adds an underline on hover */
+}
+.nav-link {
+  padding: 0 15px; /* Adjust spacing as needed */
+  border-right: 1px solid #f5eaea; /* 1px white line on the right side */
+  color: white;
+  text-decoration: none;
+}
+.nav-link:last-child {
+  border-right: none;
+}
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+  #top-bar {
+    text-align: center; /* Center text on small screens */
+  }
+  .nav-link {
+    display: block; /* Stack links vertically */
+    border-right: none; /* Remove right border */
+    border-bottom: 1px solid #f5eaea; /* Add bottom border */
+    padding: 10px 0; /* Adjust padding for vertical layout */
+  }
+  .nav-link:last-child {
+    border-bottom: none; /* Remove bottom border from last link */
+  }
+}
+/* End of navbar styles */ 
