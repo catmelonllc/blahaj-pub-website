@@ -4,14 +4,14 @@ url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=s
                     background-color: #000000; color: #d1e7c2; 
             /* Default text color for dark mode */
         }
-        /* Dark Mode Link Colors */ a { color: #43d843; 
-            /* Unvisited links */
-        }
-        a:visited { color: #42db68; /* Visited links */
-        }
-        a:hover { color: #A8E4A2; /* Hover for dark 
-            mode */
-        }
+    /* Dark Mode Link Colors */ a { color: #43d843; text-decoration: none;
+      /* Unvisited links */
+    }
+  a:visited { color: #42db68; text-decoration: none; /* Visited links */
+  }
+    a:hover { color: #A8E4A2; text-decoration: none; /* Hover for dark 
+      mode */
+    }
         /* Dark Mode H1 Color */ h1 { color: #70ec70; 
             /* Heading 1 color for dark mode */
         }
@@ -25,7 +25,7 @@ url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=s
     /* Animated Rainbow Gradient for "About me!" 
     heading */
 /* Animated Rainbow Gradient for "About me!" heading */ 
-h1, h2, em {
+h1, h2, em  details summary {
     background-image: linear-gradient(
         to right,
         #ff0000, /* red */
