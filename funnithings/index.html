@@ -19,6 +19,32 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
 <script src="/js/loadNavbar.js"></script>
+<style>img { max-width: 100%; /* IMPORTANT: Makes 
+    images responsive, so they shrink to fit smaller 
+    screens/containers */ height: auto; /* IMPORTANT: 
+    Maintains the image's aspect ratio when its width 
+    changes */ width: 250px; /* Adjust this value! Try 
+    300px, 400px, 500px, etc., to find a good 
+    consistent size */ display: block; /* Makes the 
+    image a block-level element, so it takes up its own 
+    line */ margin: 10px 0 px; /* Centers the image 
+    horizontally if it's smaller than its container */ 
+    border-radius: 8px; /* Optional: Adds slightly 
+    rounded corners for a softer look */ box-shadow: 0 
+    4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a 
+    subtle shadow for depth */
+}
+.image-gallery { display: flex; /* Makes the container 
+    a flex container */ flex-wrap: wrap; /* Allows 
+    images to wrap to the next line if there's not 
+    enough space */ justify-content: center; /* Centers 
+    the images horizontally within the gallery */ gap: 
+    20px; /* Adds space between the images */ 
+    margin-top: 20px; /* Optional: Adds some space 
+    above the gallery */ margin-bottom: 20px; /* 
+    Optional: Adds some space below the gallery */
+}
+</style>
 <!--End link tags-->
 <!--Head and body! yay-->
 </head>

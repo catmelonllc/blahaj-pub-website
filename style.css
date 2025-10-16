@@ -1,7 +1,7 @@
 @import 
 url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
         body { font-family: 'Roboto Mono', monospace; 
-            background-color: #002009; color: #d1e7c2; 
+                    background-color: #000000; color: #d1e7c2; 
             /* Default text color for dark mode */
         }
         /* Dark Mode Link Colors */ a { color: #43d843; 
@@ -15,32 +15,6 @@ url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=s
         /* Dark Mode H1 Color */ h1 { color: #70ec70; 
             /* Heading 1 color for dark mode */
         }
-        
-        img { max-width: 100%; /* IMPORTANT: Makes 
-    images responsive, so they shrink to fit smaller 
-    screens/containers */ height: auto; /* IMPORTANT: 
-    Maintains the image's aspect ratio when its width 
-    changes */ width: 250px; /* Adjust this value! Try 
-    300px, 400px, 500px, etc., to find a good 
-    consistent size */ display: block; /* Makes the 
-    image a block-level element, so it takes up its own 
-    line */ margin: 10px 0 px; /* Centers the image 
-    horizontally if it's smaller than its container */ 
-    border-radius: 8px; /* Optional: Adds slightly 
-    rounded corners for a softer look */ box-shadow: 0 
-    4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a 
-    subtle shadow for depth */
-}
-.image-gallery { display: flex; /* Makes the container 
-    a flex container */ flex-wrap: wrap; /* Allows 
-    images to wrap to the next line if there's not 
-    enough space */ justify-content: center; /* Centers 
-    the images horizontally within the gallery */ gap: 
-    20px; /* Adds space between the images */ 
-    margin-top: 20px; /* Optional: Adds some space 
-    above the gallery */ margin-bottom: 20px; /* 
-    Optional: Adds some space below the gallery */
-}
 /* You might want to remove the 'display: block;' and 
 'margin: 10px auto;' from the general img rule
    if you want the flexbox to handle all alignment and 
@@ -81,11 +55,11 @@ h1, h2, em {
     }
 }
 #top-bar {
-  background-color: #00582b; /* green cause why not*/
+  background-color: #888888; /* changed to grey */
   padding: 15px;
   color: #b5f7be; /* White text */
   text-align: center; /* Aligns text to the center */
-font-family: 'Roboto Mono', monospace;
+  font-family: 'Roboto Mono', monospace;
 }
 
 #top-bar a {

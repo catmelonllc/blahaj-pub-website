@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-  fetch('/priority/navbar.html')
+  fetch('/priority/devnavbar.html')
     .then(response => response.text())
     .then(data => {
       document.body.insertAdjacentHTML('afterbegin', data);
