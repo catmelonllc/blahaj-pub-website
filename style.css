@@ -25,7 +25,7 @@ url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=s
     /* Animated Rainbow Gradient for "About me!" 
     heading */
 /* Animated Rainbow Gradient for "About me!" heading */ 
-h1, h2, em  details summary {
+h1, h2, em{
     background-image: linear-gradient(
         to right,
         #ff0000, /* red */
@@ -53,6 +53,23 @@ h1, h2, em  details summary {
     100% {
         background-position: 200% 50%;
     }
+}
+/* Rainbow horizontal rule - uses the same animated gradient as headings */
+hr.rainbow, hr {
+  border: 0;
+  height: 3px; /* adjust thickness as desired */
+  background-image: linear-gradient(
+    to right,
+    #ff0000, /* red */
+    #ff8000, /* orange */
+    #ffff00, /* yellow */
+    #00ff00, /* green */
+    #0000ff, /* blue */
+    #4b0082, /* indigo */
+    #9400d3 /* violet */
+  );
+  background-size: 200% auto;
+  animation: rainbow-animation 7s infinite linear;
 }
 #top-bar {
   background-color: #888888; /* changed to grey */
