@@ -25,7 +25,7 @@ url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=s
     /* Animated Rainbow Gradient for "About me!" 
     heading */
 /* Animated Rainbow Gradient for "About me!" heading */ 
-h1, h2, em, code{
+h1, h2, em {
     background-image: linear-gradient(
         to right,
         #ff0000, /* red */
