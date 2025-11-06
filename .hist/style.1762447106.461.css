@@ -147,5 +147,3 @@ hr.rainbow, hr {
 }
 .back-to-top:hover { text-decoration: underline; }
 button:focus, a:focus { outline: 2px solid #43d843; }
-img { object-fit: contain; }
-img:not([src]) { visibility:hidden; }   /* hides completely empty img tags */

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- Navigation bar -->
+<div id="top-bar">
+  <div id="top-bar-links">
+  <a href="/" class="nav-link">Home</a>
+  <a href="/projects/index.html" class="nav-link">Projects</a>    
+  <a href="/projects/contact/index.html" class="nav-link">Contact Me</a>
+  <a href="/projects/about/index.html" class="nav-link">About me</a>
+  <a href="/projects/changelog/index.html" class="nav-link">Change Log</a>
+  <a href="/funnithings/warning/index.html" class="nav-link">Videos</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Navbar with Live Date & Time</title>
+
+  <!-- Tiny styling – adjust as you like -->
+  <style>
+    .navbar {
+      background:#222;
+      color:#fff;
+      padding:0.5rem 1rem;
+      font-family:Arial,Helvetica,sans-serif;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+    .datetime {
+      font-size:0.85rem;          /* makes it “small” */
+      white-space:nowrap;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">My Site</div>
+    <div class="datetime" id="liveDateTime"></div>
+  </nav>
+
+  <script>
+    // Helper: formats a Date object as mm/dd/yyyy
+    const formatDate = d => {
+      const mm = String(d.getMonth() + 1).padStart(2, '0');
+      const dd = String(d.getDate()).padStart(2, '0');
+      const yyyy = d.getFullYear();
+      return `${mm}/${dd}/${yyyy}`;
+    };
+
+    // Helper: formats a Date object as a 12‑hour clock with AM/PM
+    const formatTime = d => {
+      const options = { hour: 'numeric', minute: '2-digit', hour12: true };
+      // toLocaleTimeString respects the user’s time‑zone automatically
+      return d.toLocaleTimeString(undefined, options);
+    };
+
+    // Main updater – runs once now and then every minute
+    const updateDateTime = () => {
+      const now = new Date();                     // local time for the viewer
+      const datePart = formatDate(now);
+      const timePart = formatTime(now);
+      document.getElementById('liveDateTime').textContent =
+        `${datePart} ${timePart}`;                // non‑breaking space between
+    };
+
+    // Initial call
+    updateDateTime();
+
+    // Re‑run at the start of each new minute.
+    // Compute how many ms remain until the next minute tick,
+    // then set a repeating interval of 60 000 ms.
+    const msToNextMinute = (60 - new Date().getSeconds()) * 1000 -
+                           new Date().getMilliseconds();
+
+    setTimeout(() => {
+      updateDateTime();               // first tick exactly on the minute
+      setInterval(updateDateTime, 60_000); // thereafter every minute
+    }, msToNextMinute);
+  </script>
+</body>
+</html>
+</div>

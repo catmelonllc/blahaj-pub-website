@@ -45,17 +45,24 @@ hello there people! this is my FIRST website ever. check out my projects and oth
 <a href="https://carsoncoder.com" target="_blank" rel="noopener noreferrer"><img src="/media2/photos/88x31/carsoncoder.png" alt="Carson coder site" width="88" height="31"></a>
 <hr>
 <h2>My buttons! (please add these I need traffic)</h2>
-
+<!-- -------------------------------------------------
+       OPTIONAL: tiny CSS reset for the banner image
+       ------------------------------------------------- -->
   <style>
+    /* Make the image behave like a button */
     .stupid-banner {
-      display: inline-block;          
-      width: 88px;                    
-      height: 31px;                   
-      cursor: pointer;                
+      display: inline-block;          /* keep it on one line */
+      width: 88px;                    /* exact width you asked for */
+      height: 31px;                   /* exact height you asked for */
+      cursor: pointer;                /* mouse pointer on hover */
     }
   </style>
+</head>
+<body>
 
-
+  <!-- -------------------------------------------------
+       1️⃣ The clickable banner image
+       ------------------------------------------------- -->
   <img src="/media2/photos/88x31/retro.png"
      alt="Retro banner"
      class="stupid-banner"
@@ -65,21 +72,21 @@ hello there people! this is my FIRST website ever. check out my projects and oth
      alt="New banner"
      class="stupid-banner"
      id="stupidBannerNew">
-
+  <!-- -------------------------------------------------
+       2️⃣ JavaScript that shows the alert
+       ------------------------------------------------- -->
   <script>
-  // Wait until the DOM is ready
-  document.addEventListener('DOMContentLoaded', () => {
-    // Grab every banner (both retro and new) by class
-    const banners = document.querySelectorAll('.stupid-banner');
+    // Wait until the DOM is ready (just in case the script is placed in <head>)
+    document.addEventListener('DOMContentLoaded', () => {
+      const banner = document.getElementById('stupidBanner');
+      if (!banner) return;   // safety guard
 
-    banners.forEach(banner => {
-      banner.addEventListener('click', e => {
-        e.preventDefault();               // just in case it’s inside a link
-        alert('you stupid');              // same message for both
+      banner.addEventListener('click', (e) => {
+        e.preventDefault();               // stop any default link behaviour
+        alert('you stupid');                  // the message you want
       });
     });
-  });
-</script>
+  </script>
 
 <br>
 <h3><i>choose.</i></h3>

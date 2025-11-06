@@ -23,6 +23,9 @@
 <body>
 <main>
 <section>
+<button id="theme-toggle" aria-label="Toggle light/dark theme">
+  🌙
+</button>
 <h1 id="welcome-heading">Welcome!</h1>
 <span id="first-visit-msg" class="first-visit"></span>
 <p>
@@ -42,45 +45,9 @@ hello there people! this is my FIRST website ever. check out my projects and oth
 <img src="/media2/photos/88x31/IMG_3945.PNG" alt="IMG_3945.PNG" width="88" height="31">
 <img src="/media2/photos/88x31/miku.DJ37-2FD.gif" alt="miku.DJ37-2FD.gif" width="88" height="31">
 <a href="https://copyparty.eu" target="_blank"><img src="/media2/photos/88x31/hi.png" alt="hi.png" width="88" height="31"></a>
-<a href="https://carsoncoder.com" target="_blank" rel="noopener noreferrer"><img src="/media2/photos/88x31/carsoncoder.png" alt="Carson coder site" width="88" height="31"></a>
 <hr>
 <h2>My buttons! (please add these I need traffic)</h2>
-
-  <style>
-    .stupid-banner {
-      display: inline-block;          
-      width: 88px;                    
-      height: 31px;                   
-      cursor: pointer;                
-    }
-  </style>
-
-
-  <img src="/media2/photos/88x31/retro.png"
-     alt="Retro banner"
-     class="stupid-banner"
-     id="stupidBannerRetro">
-
-  <img src="/media2/photos/88x31/new.png"
-     alt="New banner"
-     class="stupid-banner"
-     id="stupidBannerNew">
-
-  <script>
-  // Wait until the DOM is ready
-  document.addEventListener('DOMContentLoaded', () => {
-    // Grab every banner (both retro and new) by class
-    const banners = document.querySelectorAll('.stupid-banner');
-
-    banners.forEach(banner => {
-      banner.addEventListener('click', e => {
-        e.preventDefault();               // just in case it’s inside a link
-        alert('you stupid');              // same message for both
-      });
-    });
-  });
-</script>
-
+<img src="/media2/photos/88x31/retro.png" alt="retro" width="88" height="31"><img src="/media2/photos/88x31/new.png" alt="new one with green border" width="88" height="31">
 <br>
 <h3><i>choose.</i></h3>
 <details>
@@ -96,5 +63,6 @@ to add the <I><b>new</I></b> button. paste this into your web browser: <code>&lt
 </section>
 </main>
 <script src="/js/firstVisit.js"></script>
+<script src="/js/themeToggle.js"></script>
 </body>
 </html>

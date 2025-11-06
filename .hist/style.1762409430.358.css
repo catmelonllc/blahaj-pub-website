@@ -127,25 +127,99 @@ hr.rainbow, hr {
     color: #ffffff;       /* white – change if you prefer another colour */
     opacity: 0.85;
 }
-/* In style.css – make the navbar wrap nicely on phones */
-@media (max-width: 600px) {
-  #top-bar-links {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  #top-bar-links a,
-  #top-bar-links button {
-    margin-bottom: 0.5rem;
-  }
+/* ---------------------------------------------------------
+   LIGHT / DARK THEMES
+   --------------------------------------------------------- */
+:root {
+  /* Light‑mode defaults (these values are used when .dark-theme is NOT present) */
+  --bg-body:    #ffffff;
+  --txt-body:   #111111;
+  --link:       #0066cc;
+  --link-hover: #004499;
+  --nav-bg:     #f0f0f0;
+  --nav-txt:    #111111;
 }
-.back-to-top {
-  display: block;
-  margin: 2rem 0;
-  text-align: right;
-  font-size: 0.9rem;
-  color: #43d843;          /* matches your green links */
+
+/* Dark‑mode overrides – applied when <html class="dark-theme"> */
+.dark-theme {
+  --bg-body:    #000000;
+  --txt-body:   #d1e7c2;
+  --link:       #43d843;
+  --link-hover: #A8E4A2;
+  --nav-bg:     #222222;
+  --nav-txt:    #b5f7be;
 }
-.back-to-top:hover { text-decoration: underline; }
-button:focus, a:focus { outline: 2px solid #43d843; }
-img { object-fit: contain; }
-img:not([src]) { visibility:hidden; }   /* hides completely empty img tags */
+
+/* Apply the variables */
+body {
+  background-color: var(--bg-body);
+  color:            var(--txt-body);
+}
+a { color: var(--link); }
+a:hover { color: var(--link-hover); }
+
+#top-bar {
+  background-color: var(--nav-bg);
+  color:            var(--nav-txt);
+}
+
+/* Theme‑toggle button – tiny and unobtrusive */
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  color: inherit;               /* inherits the nav text colour */
+}
+#theme-toggle:focus { outline: 2px solid currentColor; }
+/* ---------------------------------------------------------
+   NAVBAR LIGHT / DARK THEMES
+   --------------------------------------------------------- */
+
+/* Light‑mode defaults (applied when .dark-nav is NOT present) */
+#top-bar {
+  --nav-bg:       #f0f0f0;   /* light background */
+  --nav-text:     #111111;   /* dark text */
+  --nav-link:     #0066cc;   /* normal link colour */
+  --nav-link-hov: #004499;   /* hover colour */
+}
+
+/* Dark‑mode overrides – activated by adding .dark-nav to #top-bar */
+#top-bar.dark-nav {
+  --nav-bg:       #222222;   /* dark background */
+  --nav-text:     #d1e7c2;   /* light‑greenish text (matches your site) */
+  --nav-link:     #43d843;   /* green links */
+  --nav-link-hov: #A8E4A2;   /* lighter green on hover */
+}
+
+/* Apply the variables */
+#top-bar {
+  background-color: var(--nav-bg);
+  color:            var(--nav-text);
+}
+
+/* Links inside the navbar */
+#top-bar a {
+  color: var(--nav-link);
+}
+#top-bar a:hover {
+  color: var(--nav-link-hov);
+}
+
+/* Tiny style for the toggle button – it inherits the navbar text colour */
+#nav-theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  color: inherit;               /* uses --nav-text */
+}
+#nav-theme-toggle:focus {
+  outline: 2px solid currentColor;
+}
+
+/* ---------------------------------------------------------
+   GLOBAL SMOOTH SCROLL
+   ---------------------------------------

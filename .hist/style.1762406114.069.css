@@ -120,32 +120,4 @@ hr.rainbow, hr {
     margin-left: 1rem;
     white-space: nowrap;
     vertical-align: middle;  /* aligns with the text baseline */
-    color: #ffffff;
 }
-.first-visit {
-    font-size: 0.85rem;   /* matches the tiny clock */
-    color: #ffffff;       /* white – change if you prefer another colour */
-    opacity: 0.85;
-}
-/* In style.css – make the navbar wrap nicely on phones */
-@media (max-width: 600px) {
-  #top-bar-links {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  #top-bar-links a,
-  #top-bar-links button {
-    margin-bottom: 0.5rem;
-  }
-}
-.back-to-top {
-  display: block;
-  margin: 2rem 0;
-  text-align: right;
-  font-size: 0.9rem;
-  color: #43d843;          /* matches your green links */
-}
-.back-to-top:hover { text-decoration: underline; }
-button:focus, a:focus { outline: 2px solid #43d843; }
-img { object-fit: contain; }
-img:not([src]) { visibility:hidden; }   /* hides completely empty img tags */
