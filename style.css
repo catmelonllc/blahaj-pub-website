@@ -20,12 +20,12 @@ url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=s
    if you want the flexbox to handle all alignment and 
    spacing. Let's adjust the general img rule to fit 
    flexbox better: */
-    strong, b { color: #77dd77;
+    strong, b { color: #e02e2e;
 }
     /* Animated Rainbow Gradient for "About me!" 
     heading */
 /* Animated Rainbow Gradient for "About me!" heading */ 
-h1, h2, em, code{
+h1, h2, em {
     background-image: linear-gradient(
         to right,
         #ff0000, /* red */
@@ -149,3 +149,9 @@ hr.rainbow, hr {
 button:focus, a:focus { outline: 2px solid #43d843; }
 img { object-fit: contain; }
 img:not([src]) { visibility:hidden; }   /* hides completely empty img tags */
+.stupid {
+    display: inline-block;          
+    width: 88px;                    
+    height: 31px;                   
+    cursor: pointer;                
+}

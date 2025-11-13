@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', () => {
 /* firstVisit.js – show “You first visited this website on … at …” */
 
 /* -------------------------------------------------------------
@@ -108,4 +109,4 @@ function setStoredISO(iso) {
       heading.parentNode.insertBefore(span, heading.nextSibling);
     }
   }
-})();
+})();});
