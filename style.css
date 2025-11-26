@@ -1,51 +1,33 @@
 @import 
 url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
-        body { font-family: 'Roboto Mono', monospace; 
-                    background-color: #000000; color: #d1e7c2; 
-            /* Default text color for dark mode */
-        }
-    /* Dark Mode Link Colors */ a { color: #43d843; text-decoration: none;
-      /* Unvisited links */
-    }
-  a:visited { color: #42db68; text-decoration: none; /* Visited links */
-  }
-    a:hover { color: #A8E4A2; text-decoration: none; /* Hover for dark 
-      mode */
-    }
-        /* Dark Mode H1 Color */ h1 { color: #70ec70; 
-            /* Heading 1 color for dark mode */
-        }
-/* You might want to remove the 'display: block;' and 
-'margin: 10px auto;' from the general img rule
-   if you want the flexbox to handle all alignment and 
-   spacing. Let's adjust the general img rule to fit 
-   flexbox better: */
-    strong, b { color: #e02e2e;
+body { font-family: 'Roboto Mono', monospace; 
+    background-color: #000000; color: #d1e7c2;
 }
-    /* Animated Rainbow Gradient for "About me!" 
-    heading */
-/* Animated Rainbow Gradient for "About me!" heading */ 
-h1, h2, em {
-    background-image: linear-gradient(
-        to right,
-        #ff0000, /* red */
-        #ff8000, /* orange */
-        #ffff00, /* yellow */
-        #00ff00, /* green */
-        #0000ff, /* blue */
-        #4b0082, /* indigo */
-        #9400d3 /* violet */
-    );
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    
-    /* ADD THESE TWO LINES FOR ANIMATION */
-    background-size: 200% auto;
-    animation: rainbow-animation 7s infinite linear;
+a { color: #43d843; text-decoration: none;
 }
-
-/* ADD THIS ENTIRE RULE FOR ANIMATION */
+a:visited { color: #42db68; text-decoration: none;
+}
+a:hover { color: #A8E4A2; text-decoration: none;
+}
+strong, b { color: #e02e2e;
+}
+.rainbow {
+  background-image: linear-gradient(
+    to right,
+    #ff0000,
+    #ff8000,
+    #ffff00,
+    #00ff00,
+    #0000ff,
+    #4b0082,
+    #9400d3
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 200% auto;
+  animation: rainbow-animation 7s infinite linear;
+}
 @keyframes rainbow-animation {
     0% {
         background-position: 0% 50%;
@@ -54,80 +36,73 @@ h1, h2, em {
         background-position: 200% 50%;
     }
 }
-/* Rainbow horizontal rule - uses the same animated gradient as headings */
 hr.rainbow, hr {
   border: 0;
-  height: 3px; /* adjust thickness as desired */
+  height: 3px;
   background-image: linear-gradient(
     to right,
-    #ff0000, /* red */
-    #ff8000, /* orange */
-    #ffff00, /* yellow */
-    #00ff00, /* green */
-    #0000ff, /* blue */
-    #4b0082, /* indigo */
-    #9400d3 /* violet */
+    #ff0000,
+    #ff8000,
+    #ffff00,
+    #00ff00,
+    #0000ff,
+    #4b0082,
+    #9400d3
   );
   background-size: 200% auto;
   animation: rainbow-animation 7s infinite linear;
 }
 #top-bar {
-  background-color: #888888; /* changed to grey */
+  background-color: #888888;
   padding: 15px;
-  color: #b5f7be; /* White text */
-  text-align: center; /* Aligns text to the center */
+  color: #b5f7be;
+  text-align: center;
   font-family: 'Roboto Mono', monospace;
 }
-
 #top-bar a {
   color: #ffffff;
-  text-decoration: none; /* Removes the underline from links */
-  margin: 0 4px; /* Adds space between links */
+  text-decoration: none;
+  margin: 0 4px;
   font-weight: bold;
 }
-
 #top-bar a:hover {
-  text-decoration: underline; /* Adds an underline on hover */
+  text-decoration: underline;
 }
 .nav-link {
-  padding: 0 15px; /* Adjust spacing as needed */
-  border-right: 1px solid #f5eaea; /* 1px white line on the right side */
+  padding: 0 15px;
+  border-right: 1px solid #f5eaea;
   color: white;
   text-decoration: none;
 }
 .nav-link:last-child {
   border-right: none;
 }
-/* Responsive adjustments for smaller screens */
 @media (max-width: 600px) {
   #top-bar {
-    text-align: center; /* Center text on small screens */
+    text-align: center;
   }
   .nav-link {
-    display: block; /* Stack links vertically */
-    border-right: none; /* Remove right border */
-    border-bottom: 1px solid #f5eaea; /* Add bottom border */
-    padding: 10px 0; /* Adjust padding for vertical layout */
+    display: block;
+    border-right: none;
+    border-bottom: 1px solid #f5eaea;
+    padding: 10px 0;
   }
   .nav-link:last-child {
-    border-bottom: none; /* Remove bottom border from last link */
+    border-bottom: none;
   }
 }
-/* End of navbar styles */ 
-/* Already in your style.css – just make sure it’s loaded after the navbar */
 .tiny-clock {
-    font-size: 0.85rem;      /* matches your existing rule */
+    font-size: 0.85rem;
     margin-left: 1rem;
     white-space: nowrap;
-    vertical-align: middle;  /* aligns with the text baseline */
+    vertical-align: middle;
     color: #ffffff;
 }
 .first-visit {
-    font-size: 0.85rem;   /* matches the tiny clock */
-    color: #ffffff;       /* white – change if you prefer another colour */
+    font-size: 0.85rem;
+    color: #ffffff;
     opacity: 0.85;
 }
-/* In style.css – make the navbar wrap nicely on phones */
 @media (max-width: 600px) {
   #top-bar-links {
     flex-direction: column;
@@ -138,20 +113,12 @@ hr.rainbow, hr {
     margin-bottom: 0.5rem;
   }
 }
-.back-to-top {
-  display: block;
-  margin: 2rem 0;
-  text-align: right;
-  font-size: 0.9rem;
-  color: #43d843;          /* matches your green links */
-}
-.back-to-top:hover { text-decoration: underline; }
 button:focus, a:focus { outline: 2px solid #43d843; }
 img { object-fit: contain; }
-img:not([src]) { visibility:hidden; }   /* hides completely empty img tags */
+img:not([src]) { visibility:hidden; }
 .stupid {
-    display: inline-block;          
-    width: 88px;                    
-    height: 31px;                   
-    cursor: pointer;                
+    display: inline-block;
+    width: 88px;
+    height: 31px;
+    cursor: pointer;
 }
