@@ -9,8 +9,6 @@ a:visited { color: #42db68; text-decoration: none;
 }
 a:hover { color: #A8E4A2; text-decoration: none;
 }
-strong, b { color: #e02e2e;
-}
 .rainbow {
   background-image: linear-gradient(
     to right,
