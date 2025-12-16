@@ -28,6 +28,20 @@
 <img src="/media2/photos/compressed/alexhi.webp" alt="alex hi"><img src="/media2/photos/uncompressed/shiggy.gif" alt="shig hitting the shiggy" height="64" width="64">
 hi!!!!! check out my projects and other things. if you are wondering what i use. i am using apache 2.4.62 on debian 12."bookworm" this website isnt really good but you can make it better by sending feedback in my contact page and ill gladly add it if i think its good.
 </p>
+<button onclick="openAboutBlankAndRedirect()">
+  open in about:blank?
+</button>
+<script>
+function openAboutBlankAndRedirect() {
+  const newWindow = window.open('about:blank', 'myNewWindow');
+
+  if (newWindow) {
+    newWindow.location.href = '/';
+  } else {
+    alert("Please allow pop-ups for this site to use this feature.");
+  }
+}
+</script>
 <hr>
 <a href="https://arc.net" target="_blank" rel="noopener noreferrer"><img src="/media2/photos/88x31/arc.gif" alt="arc.gif" width="88" height="31"></a>
 <a href="https://debian.org" target="_blank" rel="noopener noreferrer"><img src="/media2/photos/88x31/IMG_3941.GIF" alt="IMG_3941.GIF" width="88" height="31"></a>
