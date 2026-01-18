@@ -1,0 +1,5 @@
+User-agent: Discordbot
+Allow: /
+
+User-agent: *
+Disallow: /

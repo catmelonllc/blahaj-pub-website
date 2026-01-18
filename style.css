@@ -1,0 +1,122 @@
+@import 
+url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+body { font-family: 'Roboto Mono', monospace; 
+    background-color: #000000; color: #d1e7c2;
+}
+a { color: #43d843; text-decoration: none;
+}
+a:visited { color: #42db68; text-decoration: none;
+}
+a:hover { color: #A8E4A2; text-decoration: none;
+}
+.rainbow {
+  background-image: linear-gradient(
+    to right,
+    #ff0000,
+    #ff8000,
+    #ffff00,
+    #00ff00,
+    #0000ff,
+    #4b0082,
+    #9400d3
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 200% auto;
+  animation: rainbow-animation 7s infinite linear;
+}
+@keyframes rainbow-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 200% 50%;
+    }
+}
+hr.rainbow, hr {
+  border: 0;
+  height: 3px;
+  background-image: linear-gradient(
+    to right,
+    #ff0000,
+    #ff8000,
+    #ffff00,
+    #00ff00,
+    #0000ff,
+    #4b0082,
+    #9400d3
+  );
+  background-size: 200% auto;
+  animation: rainbow-animation 7s infinite linear;
+}
+#top-bar {
+  background-color: #888888;
+  padding: 15px;
+  color: #b5f7be;
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+}
+#top-bar a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 4px;
+  font-weight: bold;
+}
+#top-bar a:hover {
+  text-decoration: underline;
+}
+.nav-link {
+  padding: 0 15px;
+  border-right: 1px solid #f5eaea;
+  color: white;
+  text-decoration: none;
+}
+.nav-link:last-child {
+  border-right: none;
+}
+@media (max-width: 600px) {
+  #top-bar {
+    text-align: center;
+  }
+  .nav-link {
+    display: block;
+    border-right: none;
+    border-bottom: 1px solid #f5eaea;
+    padding: 10px 0;
+  }
+  .nav-link:last-child {
+    border-bottom: none;
+  }
+}
+.tiny-clock {
+    font-size: 0.85rem;
+    margin-left: 1rem;
+    white-space: nowrap;
+    vertical-align: middle;
+    color: #ffffff;
+}
+.first-visit {
+    font-size: 0.85rem;
+    color: #ffffff;
+    opacity: 0.85;
+}
+@media (max-width: 600px) {
+  #top-bar-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #top-bar-links a,
+  #top-bar-links button {
+    margin-bottom: 0.5rem;
+  }
+}
+button:focus, a:focus { outline: 2px solid #43d843; }
+img { object-fit: contain; }
+img:not([src]) { visibility:hidden; }
+.stupid {
+    display: inline-block;
+    width: 88px;
+    height: 31px;
+    cursor: pointer;
+}
